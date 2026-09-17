@@ -1,0 +1,58 @@
+name: Task
+description: A single piece of work — a change, a chore, or an investigation.
+type: Task
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What needs doing and why.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How we know it's done. One line per criterion.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: input
+    id: parent
+    attributes:
+      label: Parent project
+      description: Issue number or URL of the project this belongs to, if any.
+
+  - type: textarea
+    id: blocked-by
+    attributes:
+      label: Blocked by
+      description: >
+        Anything outside this issue that has to happen first. For another issue,
+        use the Relationships panel after creating. For an external blocker
+        (a DSO, a vendor, another team), describe it here.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area (Team X)
+      description: >
+        Only relevant if this is Team X work. Other teams can leave it blank.
+      options:
+        - Portals
+        - Data & Atrias
+        - BESS
+        - IT General
+        - Other / not Team X
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Links, constraints, prior attempts.

@@ -1,0 +1,74 @@
+name: Report a problem
+description: Something isn't working, or isn't behaving the way you expected.
+title: "[Problem] "
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You don't need to know what's wrong or whose fault it is — just describe
+        what you saw.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected to happen
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. See ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Blocking — nobody can work / customers affected
+        - Serious — a workaround exists but it hurts
+        - Minor — annoying, not urgent
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Where
+      description: Environment, application, customer, account — whatever narrows it down.
+      placeholder: "production, My Yuso, customer X"
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Screenshots, error messages, log excerpts, request IDs.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area (Team X)
+      description: >
+        Only relevant if this is Team X work. Other teams can leave it blank.
+      options:
+        - Portals
+        - Data & Atrias
+        - BESS
+        - IT General
+        - Other / not Team X
+    validations:
+      required: false
