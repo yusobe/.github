@@ -1,0 +1,61 @@
+name: Project (parent issue)
+description: Work large enough to need sub-issues. Creates a parent Feature issue — not a project board.
+title: "[Project] "
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for work that spans more than one task or more than one repo.
+        After creating it, add the tasks as **sub-issues** — they can live in any repo.
+
+        Note: this creates a regular **issue**, not a GitHub Projects board.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What is this, and why are we doing it now?
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What is true when this is done?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What's included, and what is explicitly out of scope.
+
+  - type: textarea
+    id: repos
+    attributes:
+      label: Repos involved
+      description: Which codebases this touches, if known.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area (Team X)
+      description: >
+        Only relevant if this is Team X work. Other teams can leave it blank.
+      options:
+        - Portals
+        - Data & Atrias
+        - BESS
+        - IT General
+        - Other / not Team X
+    validations:
+      required: false
+
+  - type: textarea
+    id: open-questions
+    attributes:
+      label: Open questions
+      description: Anything undecided that could change the shape of this.
