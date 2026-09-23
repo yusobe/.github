@@ -1,6 +1,6 @@
-name: Project (parent issue)
+name: Initiative (parent issue)
 description: Work large enough to need sub-issues. Creates a parent Feature issue — not a project board.
-title: "[Project] "
+title: "[Initiative] "
 type: Feature
 body:
   - type: markdown

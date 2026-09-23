@@ -24,8 +24,8 @@ body:
   - type: input
     id: parent
     attributes:
-      label: Parent project
-      description: Issue number or URL of the project this belongs to, if any.
+      label: Parent initiative
+      description: Issue number or URL of the initiative this belongs to, if any.
 
   - type: textarea
     id: blocked-by
