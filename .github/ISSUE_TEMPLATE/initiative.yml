@@ -50,21 +50,6 @@ body:
       label: Repos involved
       description: Which codebases this touches, if known.
 
-  - type: dropdown
-    id: area
-    attributes:
-      label: Area (Team X)
-      description: >
-        Only relevant if this is Team X work. Other teams can leave it blank.
-      options:
-        - Portals
-        - Data & Atrias
-        - BESS
-        - IT General
-        - Other / not Team X
-    validations:
-      required: false
-
   - type: textarea
     id: open-questions
     attributes:

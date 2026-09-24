@@ -47,21 +47,6 @@ body:
         use the Relationships panel after creating. For an external blocker
         (a DSO, a vendor, another team), describe it here.
 
-  - type: dropdown
-    id: area
-    attributes:
-      label: Area (Team X)
-      description: >
-        Only relevant if this is Team X work. Other teams can leave it blank.
-      options:
-        - Portals
-        - Data & Atrias
-        - BESS
-        - IT General
-        - Other / not Team X
-    validations:
-      required: false
-
   - type: textarea
     id: notes
     attributes:
