@@ -11,6 +11,17 @@ body:
 
         Note: this creates a regular **issue**, not a GitHub Projects board.
 
+  - type: input
+    id: notion
+    attributes:
+      label: Notion page
+      description: >
+        Link to the Notion page for this work, if there is one. Paste the full URL —
+        it will show near the top of the issue.
+      placeholder: "https://app.notion.com/p/..."
+    validations:
+      required: false
+
   - type: textarea
     id: context
     attributes:

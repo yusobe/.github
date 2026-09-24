@@ -2,6 +2,17 @@ name: Task
 description: A single piece of work — a change, a chore, or an investigation.
 type: Task
 body:
+  - type: input
+    id: notion
+    attributes:
+      label: Notion page
+      description: >
+        Link to the Notion page for this work, if there is one. Paste the full URL —
+        it will show near the top of the issue.
+      placeholder: "https://app.notion.com/p/..."
+    validations:
+      required: false
+
   - type: textarea
     id: context
     attributes:
